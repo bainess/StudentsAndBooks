@@ -1,0 +1,24 @@
+1,John,Doe,Computer Science,1,Programming Basics,320,1998
+1,John,Doe,Computer Science,2,Object Oriented Programming,410,2005
+1,John,Doe,Computer Science,3,Data Structures,290,1997
+1,John,Doe,Computer Science,4,Operating Systems,500,2003
+1,John,Doe,Computer Science,5,Computer Networks,350,1999
+1,John,Doe,Computer Science,6,Machine Learning Intro,420,2012
+2,Emma,Smith,Mathematics,7,Data Structures,290,1997
+2,Emma,Smith,Mathematics,8,Linear Algebra,280,1996
+2,Emma,Smith,Mathematics,9,Calculus I,300,2001
+2,Emma,Smith,Mathematics,10,Object Oriented Programming,410,2005
+2,Emma,Smith,Mathematics,11,Statistics Fundamentals,310,1998
+2,Emma,Smith,Mathematics,12,Discrete Mathematics,270,2004
+3,Michael,Brown,Physics,13,Operating Systems,500,2003
+3,Michael,Brown,Physics,14,Classical Mechanics,400,1994
+3,Michael,Brown,Physics,15,Quantum Physics,450,2002
+3,Michael,Brown,Physics,16,Computer Networks,350,1999
+3,Michael,Brown,Physics,17,Thermodynamics,380,1999
+3,Michael,Brown,Physics,18,Electromagnetism,410,2007
+4,Sophia,Wilson,History,19,Programming Basics,320,1998
+4,Sophia,Wilson,History,20,Ancient Civilizations,300,1993
+4,Sophia,Wilson,History,21,Modern European History,320,2001
+4,Sophia,Wilson,History,22,Data Structures,290,1997
+4,Sophia,Wilson,History,23,World War II,350,1998
+4,Sophia,Wilson,History,24,Medieval Times,280,2005
