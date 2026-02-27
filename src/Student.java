@@ -35,4 +35,8 @@ public class Student {
                 "Surname: " + surname + "\n" +
                 "Course: " + course + "\n";
     }
+
+    public void printStudent() {
+        System.out.println(this);
+    }
 }

@@ -1,15 +1,27 @@
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.stream.Stream;
 
 public class StudentBookService {
-  //  private List<Student> studentList = new ArrayList<>();
 
     private HashMap<Long,Student> students = new HashMap<>();
 
+    public void getBookYear(Path path) {
+        getStudentsFromFile(path).stream()
+                .peek(Student::printStudent)
+                .map(Student::getBooks)
+                .flatMap(List::stream)
+                .sorted(Comparator.comparing(Book::getPages).reversed())
+                .distinct()
+                .filter(Book::isAfterMillenia)
+                .limit(3)
+                .map(Book::getYear)
+                .findFirst().ifPresentOrElse(System.out::println, () -> System.out.println("Book was not found"));
+    }
 
     public List<Student> getStudentsFromFile(Path path) {
         try {
@@ -28,16 +40,14 @@ public class StudentBookService {
     }
 
     private  Student getDataFromLine(String linedData) {
-        System.out.println(linedData);
         String[] arrayedData = linedData.split(",");
-        System.out.println(arrayedData);
         if (arrayedData.length < 8) {throw new IllegalArgumentException("Invalid data " + linedData);}
         Student student = new Student(Long.parseLong(arrayedData[0]),
                 arrayedData[1],
                 arrayedData[2],
                 arrayedData[3]);
 
-        Book book = new Book(Integer.parseInt(arrayedData[4]),
+        Book book = new Book(Long.parseLong(arrayedData[4]),
                 arrayedData[5],
                 Integer.parseInt(arrayedData[6]),
                 Integer.parseInt(arrayedData[7]));
